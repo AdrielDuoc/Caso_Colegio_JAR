@@ -1,4 +1,4 @@
-package com.jar.SIGED.Models.Repository;
+package com.jar.SIGED.Repository;
 
 import com.jar.SIGED.Models.Entities.Docente;
 import org.springframework.data.jpa.repository.JpaRepository;
