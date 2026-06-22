@@ -21,7 +21,7 @@ public class Calificacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCalificacion;
+    private Integer idCalificacion;
 
     @NotNull
     private double nota;

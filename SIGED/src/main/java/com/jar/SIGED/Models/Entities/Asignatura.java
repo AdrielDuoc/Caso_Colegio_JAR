@@ -22,7 +22,7 @@ public class Asignatura {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idAsignatura;
+    private Integer idAsignatura;
 
     @NotBlank
     private String nombreAsignatura;
