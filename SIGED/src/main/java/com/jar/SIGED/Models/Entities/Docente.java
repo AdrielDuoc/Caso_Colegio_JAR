@@ -22,14 +22,14 @@ public class Docente {
     private Integer idDocente;
 
     @NotBlank
-    private String nombre_Docente;
+    private String nombreDocente;
 
     @NotBlank
-    private String apellido_Docente;
+    private String apellidoDocente;
 
     @NotBlank
-    private String rut_Docente;
+    private String rutDocente;
 
     @NotBlank
-    private String asignatura_Docente;
+    private String asignaturaDocente;
 }

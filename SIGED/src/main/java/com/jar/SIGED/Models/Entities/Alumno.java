@@ -23,15 +23,15 @@ public class Alumno {
     private Integer idAlumno;
 
     @NotBlank
-    private String nombre_Alumno;
+    private String nombreAlumno;
 
     @NotBlank
-    private String apellido_Alumno;
+    private String apellidoAlumno;
 
     @NotNull
-    private Integer edad_Alumno;
+    private Integer edadAlumno;
 
     @NotBlank
-    private String rut_Alumno;
+    private String rutAlumno;
 
 }
