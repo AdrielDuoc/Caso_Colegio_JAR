@@ -20,7 +20,7 @@ public class Alumno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idAlumno;
 
     @NotBlank
     private String nombre_Alumno;
