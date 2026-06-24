@@ -1,4 +1,4 @@
-package main.java.com.jar.SIGED.Controller;
+package com.jar.SIGED.Controller;
 
 import java.util.List;
 
@@ -19,20 +19,20 @@ import com.jar.SIGED.Service.AlumnoService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/asignaturas")
+@RequestMapping("/api/v1/alumnos")
 public class AlumnoController {
 
     @Autowired
-    private AlumnoService AlumnoController;
+    private AlumnoService alumnoService;
 
     @GetMapping
     public ResponseEntity<List<Alumno>> obtenerAlumno(){
-        return ResponseEntity.ok(alumnoService.getAllAlumno());
+        return ResponseEntity.ok(alumnoService.getAllAlumnos());
     }
 
     @GetMapping("/id")
     public ResponseEntity<Alumno> obtenerAlumnoPorId(@PathVariable Integer id){
-        Alumno alumno = alumnoService.getAlumnoaById(id);
+        Alumno alumno = alumnoService.getAlumnoById(id);
         if (alumno == null){
             return ResponseEntity.notFound().build();
         }
@@ -45,7 +45,7 @@ public class AlumnoController {
     }
 
     @PutMapping("/id")
-    public ResponseEntity<Alumno> actualizarAsignatura(@PathVariable Integer id, @Valid @RequestBody Alumno alumno){
+    public ResponseEntity<Alumno> actualizarAlumno(@PathVariable Integer id, @Valid @RequestBody Alumno alumno){
         alumno.setIdAlumno(id);
         Alumno actualizarAlumno = alumnoService.updateAlumno(alumno);
         if(actualizarAlumno == null){
@@ -56,7 +56,7 @@ public class AlumnoController {
 
     @DeleteMapping("/id")
     public ResponseEntity<Void> borrarAlumno(@PathVariable Integer id){
-        alumnoService.deleteAsignatura(id);
+        alumnoService.deleteAlumno(id);
         return ResponseEntity.noContent().build();
     }
 }

@@ -1,6 +1,5 @@
 package com.jar.SIGED.Controller;
 
-import com.jar.SIGED.Repository.CursoRepository;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jar.SIGED.Models.Entities.Curso;
-import com.jar.SIGED.Models.Entities.Docente;
 import com.jar.SIGED.Service.CursoService;
-import com.jar.SIGED.Service.DocenteService;
+
 
 @RestController
 @RequestMapping("/api/v1/cursos")

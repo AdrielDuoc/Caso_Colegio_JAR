@@ -1,4 +1,3 @@
-
 package com.jar.SIGED.Models.Entities;
 
 import jakarta.persistence.*;
