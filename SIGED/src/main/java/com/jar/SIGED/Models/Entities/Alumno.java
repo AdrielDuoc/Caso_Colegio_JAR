@@ -1,5 +1,7 @@
 package com.jar.SIGED.Models.Entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,5 +41,5 @@ public class Alumno {
     @NotNull
     @OneToMany
     @JoinColumn(name = "idAsignatura")
-    private Asignatura asignatura;
+    private List<Asignatura> asignatura;
 }
