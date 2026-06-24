@@ -1,10 +1,8 @@
 package com.jar.SIGED.Service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.jar.SIGED.Models.Entities.Calificacion;
 import com.jar.SIGED.Repository.CalificacionRepository;
 
