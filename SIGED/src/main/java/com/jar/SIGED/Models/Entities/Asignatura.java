@@ -20,7 +20,7 @@ public class Asignatura {
     private Integer idAsignatura;
 
     @NotBlank
-    private String nombre;
+    private String nombreAsignatura;
 
     @NotNull
     @ManyToOne

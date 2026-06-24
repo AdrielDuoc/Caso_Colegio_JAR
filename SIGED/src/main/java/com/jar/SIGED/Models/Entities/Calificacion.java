@@ -24,7 +24,7 @@ public class Calificacion {
     private Integer idCalificacion;
 
     @NotNull
-    private double nota;
+    private double notaCalificacion;
 
     @NotNull
     @ManyToOne
