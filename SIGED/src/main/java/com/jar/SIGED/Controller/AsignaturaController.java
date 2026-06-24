@@ -47,11 +47,11 @@ public class AsignaturaController {
     @PutMapping("/id")
     public ResponseEntity<Asignatura> actualizarAsignatura(@PathVariable Integer id, @Valid @RequestBody Asignatura asignatura){
         asignatura.setIdAsignatura(id);
-        Asignatura actualizAsignatura = asignaturaService.updateAsignatura(asignatura);
-        if(actualizAsignatura == null){
+        Asignatura actualizarAsignatura = asignaturaService.updateAsignatura(asignatura);
+        if(actualizarAsignatura == null){
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(actualizAsignatura);
+        return ResponseEntity.ok(actualizarAsignatura);
     }
 
     @DeleteMapping("/id")
