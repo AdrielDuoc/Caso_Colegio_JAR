@@ -1,41 +1,34 @@
-package cl.duoc.siged.model;
+package com.jar.SIGED.Models.Entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "cursos")
 public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer idCurso;
 
-    @Column(nullable = false, length = 50)
-    private String nivel;
+    @NotBlank
+    private String nombreCurso; 
 
-    @Column(nullable = false, length = 1)
-    private String seccion;
-
-    @Column(nullable = false)
-    private Integer anio;
-
-    @Column(nullable = false)
-    private Long docenteJefeId;
-
-    public Curso() {}
-
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getNivel() { return nivel; }
-    public void setNivel(String nivel) { this.nivel = nivel; }
-
-    public String getSeccion() { return seccion; }
-    public void setSeccion(String seccion) { this.seccion = seccion; }
-
-    public Integer getAnio() { return anio; }
-    public void setAnio(Integer anio) { this.anio = anio; }
-
-    public Long getDocenteJefeId() { return docenteJefeId; }
-    public void setDocenteJefeId(Long docenteJefeId) { this.docenteJefeId = docenteJefeId; }
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "idDocente")
+    private Docente docente;
 }

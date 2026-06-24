@@ -17,7 +17,6 @@ import com.jar.SIGED.Models.Entities.Calificacion;
 import com.jar.SIGED.Service.CalificacionService;
 
 import jakarta.validation.Valid;
-import lombok.Delegate;
 
 @RestController
 @RequestMapping("/api/v1/Calificaciones")
